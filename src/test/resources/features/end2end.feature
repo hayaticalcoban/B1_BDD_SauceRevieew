@@ -9,3 +9,4 @@ Feature: Login and E2E Test
     And The user opens basket
     And The user clicks on checkout button
     And The user enters details as "Ben" "Admin", "PK001" and finish purchase
+    Then The user verifies that the items are "41.02" and total is "Total: $41.02"

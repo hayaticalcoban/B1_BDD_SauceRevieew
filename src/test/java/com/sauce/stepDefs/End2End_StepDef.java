@@ -49,4 +49,11 @@ public class End2End_StepDef {
     @And("The user enters details as {string} {string}, {string} and finish purchase")
     public void theUserEntersDetailsAsAndFinishPurchase(String firstname, String lastname, String postalCode) {
     }
+
+    @Then("The user verifies that the items are {string} and total is {string}")
+    public void theUserVerifiesThatTheItemsAreAndTotalIs(String totalPrice, String expectedTotal) {
+        Assert.assertEquals(expectedTotal,checkOutPage.getTotalPrice(totalPrice));
+        System.out.println("expectedTotal = " + expectedTotal);
+        System.out.println("totalPrice = " + totalPrice);
+    }
 }
